@@ -6,28 +6,46 @@
     text-decoration: none;
 
 }
+
 body {
     background-color: #141516;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+
 }
+
+
 /************heading****************/
+
+/* *********bigger than 770px******** */
+.mobie {
+    display: none;
+}
 
 .heading {
     position: fixed;
+    display: inline-flex;
+    justify-content: center;
 
-    margin-top: -50px;
+    top: 0px;
+    left: 5%;
     z-index: 100;
     width: 90%;
-    display: inline-flex;
-    margin-left: 65px;
-    
-    background-color: #141516;
 
+    background-color: #141516;
 }
+
+.heading .but:hover {
+    color: rgb(206, 163, 21);
+    transition: 0.5s;
+} 
+
 .heading a {
     display: flex;
+    flex: 1;
     
     align-items: center;
-    width: 247px;
     height: 64px;
 
     padding-left: 20px;
@@ -44,42 +62,41 @@ body {
     border: 0.3px solid rgb(46, 46, 46);
 
     cursor: pointer;
-}
-.heading .but:hover {
-    color: rgb(206, 163, 21);
-    transition: 0.5s;
-}
+}   
+
+
 
 /**************Intro**********************/
 
-.hello-world {
-    margin: 50px;
+.introduction {
     padding-top: 100px;
-    width: 90%;
 
     color: white;
     font-family: inherit;
 }
-.hello {
-    margin-left: 60px;
-    margin-top: 20px;
+ .section {
+    padding-left: 80px;
+    padding: 50px 0 50px 80px;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .hr {
     border-bottom: 1px solid  rgb(173, 169, 169);
     width: 40px;
-
-    margin-bottom: 13px;
+}
+.hr-mobie {
+    display: none;
 }
 
 .feature {
     margin-left: 20px;
     color: #eabe7b;
-    font-size: 23px;
+    font-size: 28px;
     letter-spacing: 4px;
 }
-.doanh p {
-    padding-left: 60px;
+.introduction__quote p {
+    padding-left: 80px;
     font-family: sans-serif;
     font-size: 85px;
     font-weight: 600;   
@@ -89,6 +106,9 @@ body {
 .about {
     display: inline-flex;
     width: 100%;
+    margin: 100px 80px;
+    
+    color: white;
 
 }
 .column-left-about {
@@ -107,15 +127,7 @@ body {
     display: flex;
     align-items: center;
 }
-.hr-about {
-    display: inline-flex;
-}
-.about {
-    margin-top: 40px;
-    display: inline-flex;
-    
-    color: white;
-}
+
 .about-content {
     position: absolute;
     width: 555px;
@@ -178,16 +190,17 @@ body {
 
 
 /* **********Experience & education***************/
-
+.ex__edu-mobie {
+    display: none;
+}
 .edu-ex {
     width: 100%;
     display: inline-flex;
     justify-content: space-around;
 }
 .ex-edu {
-    width: 90%;
-    margin-left: 5%;
-    padding-left: 50px;
+    width: 100%;
+    padding-left: 80px;
     display: inline-flex;
 }
 .experience {
@@ -258,7 +271,6 @@ body {
 }
 
 .work-content {
-    width: 300px;
     height: 110px;
     margin-left: 15px;
 
@@ -279,22 +291,13 @@ body {
 
 
 .comment {
-    width: 70%;
-    height: 400px;
-
     display: inline-flex;
-
-    margin-left: 15%;
-    margin-top: 200px;
-
+    margin: 200px 0;
+    
     color: white;
+
 }
-.left-comment {
-    width: 50%;
-}
-.right-comment {
-    width: 50%;
-}
+
 .head-comment {
     display: inline-flex;
 }
@@ -349,3 +352,268 @@ body {
 .contact-p1 {
     margin-left: 0;
 }
+
+
+/* Mobie < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .section {
+        padding: 0;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+    }
+}
+
+
+
+/* Tablet: width >= 740px and < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .introduction {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .section {
+        width: 100%;
+        padding: 0;
+        margin-top: 70px;
+    }
+    .section .feature {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .hr-mobie {
+        display: block;
+    }
+    .introduction__quote p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin-top: 60px;
+    }
+    .about {
+        width: 100%;
+        margin: 100px 0;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .column-right-about, .column-left-about {
+        width: 100%;
+    }
+    .about-content {
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+    .about-content .section {
+        width: 100%;
+    }
+    .about-content .Lorem {
+        margin-top: 60px;
+        width: 100%;
+        letter-spacing: 1px;
+        line-height: 33px;
+        font-size: 20px;
+        text-align: center;
+    }
+    #dowload-cv {
+        margin: 85px auto;
+        width: 80%;
+    }
+    .p1 {
+    }
+    .expertise-box {
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 10px;
+    }
+    .expertise-box .p1 {
+        margin: 0;
+        padding-bottom: 25px;
+    }
+    .expertise-box .p2 {
+        margin: 0;
+    }
+    .expertise-box .section {
+        margin-bottom: 40px;
+    }
+    .ex-edu {
+        padding: 0;
+    }
+    .edu-ex .p1 {
+        margin-left: 0;
+    }
+    .experience {
+        width: 50%;
+        margin-left: 10px;
+    }
+    .education {
+        width: 50%;
+    }
+    .p-content {
+        display: none;
+    }
+    .contact {
+        width: 100%;
+    }
+    .work-one-company {
+        padding-left: 0;
+    }
+}
+
+
+
+ /* Mobie & Tablet width < 1024px */
+
+@media only screen and (max-width: 63.9375em) {
+    .mobie {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #545457;
+        width: 100%;
+        background-color: #141516;
+    }
+    .heading {
+        display: none;
+    }
+
+    .menuBtn {
+        border: none;
+    }
+    .mobie__logo {
+        padding-left: 40px;
+        padding-top: 30px;
+        
+        color: white;
+        font-size: 20px;
+    }
+  
+    .education, .experience, .edu-ex {
+        display: none;
+    }
+    .ex__edu-mobie {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+
+        text-align: center;
+    }
+    .ex__edu-mobie .p1 {
+        margin-left: 0px;
+        margin-top: 110px;
+    }
+    .box-exper-edu {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .timeline {
+        margin-top: 40px;
+    }
+    .recentwork {
+        padding-top: 100px;
+    }
+    .recentwork .section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .works {
+        width: 100%;
+    }
+    .column-left-works, .column-right-works {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-image img {
+        margin-left: 0;
+    }
+    .comment {
+        display: block;
+        margin: 90px 0;
+    }
+    .one-comment {
+        display: inline-flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .person-comment-quote {
+        width: 70%;
+        margin-left: 30px;
+        margin-top: 0;
+    }
+    .say-hello {
+        width: 100%;
+        height: 200vh;
+    }
+   
+    .contact {
+        display: inline-flex;
+        margin-left: 0;
+    }
+}
+    /* ************hamberger button************** */
+.menuBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: all .5s ease-in-out;
+    /* border: 1px solid #fff; */
+}
+.hamber {
+    width: 50px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all 0.5 ease-in-out;
+}
+.hamber::before, 
+.hamber::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    border-radius: 5px;
+
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+.hamber::before {
+    transform: translateY(-16px);
+}
+.hamber::after {
+    transform: translateY(16px);
+}
+.menuBtn.open .hamber {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    transition: all .5s ease-in-out;
+}
+.menuBtn.open .hamber::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menuBtn.open .hamber::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+.hello {
+    margin-left: 100px;
+}
+
+
