@@ -1,12 +1,14 @@
-const menuBtn = document.querySelector('.mobie .menuBtn');
-let menuOpen = false;
+
+// making close and open navigation
+
+const menuBtn = document.querySelector('.mobie__menuBtn');
+const openMobieNav = document.getElementsByClassName('my__link');
 
 menuBtn.addEventListener('click', () => {
-    if(!menuOpen)  {   //true
-        menuBtn.classList.add('open');
-        menuOpen = true;
+    menuBtn.classList.toggle('open');
+    if (openMobieNav[0].style.display === '') {
+        openMobieNav[0].style.display = 'flex';
     } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-    }
+        openMobieNav[0].style.display = 'none';
+    };
 });
